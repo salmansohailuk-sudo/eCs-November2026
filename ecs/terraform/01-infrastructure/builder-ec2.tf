@@ -46,13 +46,13 @@ resource "aws_instance" "builder" {
     chmod +x /usr/local/lib/docker/cli-plugins/docker-compose
 
     cd /home/ec2-user
-    if [ ! -d /home/ec2-user/ecs-october-2026 ]; then
-      git clone https://github.com/salmansohailuk-sudo/ecs-october-2026.git /home/ec2-user/ecs-october-2026
+    if [ ! -d /home/ec2-user/eCs-November2026 ]; then
+      git clone https://github.com/salmansohailuk-sudo/eCs-November2026.git /home/ec2-user/ecs-october-2026
     fi
 
-    chown -R ec2-user:ec2-user /home/ec2-user/ecs-october-2026
-    chmod +x /home/ec2-user/ecs-october-2026/ecs/*.sh
-    touch /home/ec2-user/ecs-october-2026/READY
+    chown -R ec2-user:ec2-user /home/ec2-user/eCs-November2026
+    chmod +x /home/ec2-user/eCs-November2026/ecs/*.sh
+    touch /home/ec2-user/eCs-November2026/READY
   EOF
 
   tags = {
