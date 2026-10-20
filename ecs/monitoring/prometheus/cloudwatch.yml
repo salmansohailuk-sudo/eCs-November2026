@@ -1,0 +1,51 @@
+region: us-east-1
+
+metrics:
+  - aws_namespace: ECS/ContainerInsights
+    aws_metric_name: CpuUtilized
+    aws_dimensions: [ClusterName, ServiceName]
+    aws_statistics: [Average]
+    period_seconds: 60
+    range_seconds: 300
+
+  - aws_namespace: ECS/ContainerInsights
+    aws_metric_name: MemoryUtilized
+    aws_dimensions: [ClusterName, ServiceName]
+    aws_statistics: [Average]
+    period_seconds: 60
+    range_seconds: 300
+
+  - aws_namespace: ECS/ContainerInsights
+    aws_metric_name: NetworkRxBytes
+    aws_dimensions: [ClusterName, ServiceName]
+    aws_statistics: [Sum]
+    period_seconds: 60
+    range_seconds: 300
+
+  - aws_namespace: ECS/ContainerInsights
+    aws_metric_name: NetworkTxBytes
+    aws_dimensions: [ClusterName, ServiceName]
+    aws_statistics: [Sum]
+    period_seconds: 60
+    range_seconds: 300
+
+  - aws_namespace: AWS/ApplicationELB
+    aws_metric_name: RequestCount
+    aws_dimensions: [LoadBalancer]
+    aws_statistics: [Sum]
+    period_seconds: 60
+    range_seconds: 300
+
+  - aws_namespace: AWS/ApplicationELB
+    aws_metric_name: ActiveConnectionCount
+    aws_dimensions: [LoadBalancer]
+    aws_statistics: [Sum]
+    period_seconds: 60
+    range_seconds: 300
+
+  - aws_namespace: AWS/ApplicationELB
+    aws_metric_name: HTTPCode_ELB_5XX_Count
+    aws_dimensions: [LoadBalancer]
+    aws_statistics: [Sum]
+    period_seconds: 60
+    range_seconds: 300

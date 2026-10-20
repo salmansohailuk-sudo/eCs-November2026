@@ -1,0 +1,54 @@
+# Terraform
+**/.terraform/
+**/*.tfstate
+**/*.tfstate.*
+**/crash.log
+**/crash.*.log
+**/.terraform.lock.hcl
+
+# Terraform variable files containing secrets
+**/*.tfvars
+**/*.tfvars.json
+!**/*.tfvars.example
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+
+# Docker
+.docker/
+docker-compose.override.yml
+
+# Logs
+*.log
+logs/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Build/archive artifacts
+*.zip
+*.tar
+*.tar.gz
+dist/
+build/
+
+# Local Terraform plans
+*.tfplan
+*.plan

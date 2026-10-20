@@ -1,0 +1,21 @@
+{
+  "annotations": {"list": []},
+  "editable": true,
+  "panels": [
+    {
+      "type": "stat",
+      "title": "ECS Services Up",
+      "gridPos": {"h": 4, "w": 8, "x": 0, "y": 0},
+      "targets": [{"expr": "count(up)", "refId": "A"}]
+    },
+    {
+      "type": "timeseries",
+      "title": "ECS CPU Utilized",
+      "gridPos": {"h": 8, "w": 16, "x": 8, "y": 0},
+      "targets": [{"expr": "aws_ecs_containerinsights_cpuutilized_average", "refId": "A"}]
+    }
+  ],
+  "schemaVersion": 39,
+  "title": "ECS Monitoring",
+  "version": 1
+}

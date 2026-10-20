@@ -1,0 +1,20 @@
+services:
+  frontend:
+    image: ecomm-ecs-frontend:latest
+    build:
+      context: ./frontend
+
+  backend:
+    image: ecomm-ecs-backend:latest
+    build:
+      context: ./backend
+
+  prometheus:
+    image: monitoring-ecs-prometheus:latest
+    build:
+      context: ./monitoring/prometheus
+
+  grafana:
+    image: monitoring-ecs-grafana:latest
+    build:
+      context: ./monitoring/grafana
